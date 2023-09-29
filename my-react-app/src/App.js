@@ -10,7 +10,7 @@ function App() {
   const [editTaskState, setEditTaskState] = useState({ id: null, text: '' });
 
   useEffect(() => {
-    
+    // Fetch tasks when the component mounts
     fetchTasks()
       .then((data) => {
         setTasks(data);
