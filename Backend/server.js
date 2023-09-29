@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Task = require('../models/task'); // Import your Task model
+const Task = require('../models/task');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -10,7 +10,7 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB (similar to your db.js)
+
 mongoose.connect('mongodb://localhost:27017/abi', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -21,7 +21,7 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-// Create routes similar to your taskService.js
+
 app.get('/api/tasks', async (req, res) => {
   try {
     const tasks = await Task.find();

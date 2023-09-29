@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3001/api/tasks'; // Replace with your backend API URL
+const API_BASE_URL = 'http://localhost:3001/api/tasks';
 
 export const fetchTasks = async () => {
   try {
